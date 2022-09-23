@@ -22,25 +22,23 @@ $(document).ready(function() {
         var currentHour = moment().hour();
 
         $(".time-block").each(function () {
-            var blockHour = parseInt($(this).attr("id").split("hour")[0]);
+            var blockHour = parseInt($(this).attr("id").split("hour"));
             console.log(blockHour, currentHour);
 
-            if (blockHour < currentHour) {
-                $(this).addClass("past");
+            if (currentHour > blockHour) {
                 $(this).removeClass("future");
                 $(this).removeClass("present");
-            }
-            else if (blockHour === currentHour) {
-                $(this).removeClass("past");
-                $(this).addClass("present");
-                $(this).removeClass("future");
-            }
-            else {
+                $(this).addClass("past");
+            } else if (currentHour < blockHour) {
                 $(this).removeClass("present");
                 $(this).removeClass("past");
                 $(this).addClass("future");
+            } else {
+                $(this).removeClass("future");
+                $(this).removeClass("past");
+                $(this).addClass("present");
             }
         })
-    }
+        }
     hourTracker();
 })
