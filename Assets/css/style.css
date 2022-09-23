@@ -1,9 +1,8 @@
+/*typical setup using html attributes and classes*/
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1;
-  margin: 0;
-  padding: 0;
 }
 
 textarea {
@@ -28,7 +27,7 @@ textarea {
 }
 
 .time-block {
-  text-align: center;
+  text-align: left;
   border-radius: 15px;
 }
 
@@ -39,7 +38,7 @@ textarea {
 }
 
 .hour {
-  background-color: #ffffff;
+  background-color: #ffff;
   color: #000000;
   border-top: 1px dashed #000000;
 }
@@ -70,34 +69,4 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
-}
-
-table {
-  align-items: stretch;
-  width: 100%;
-}
-
-tr {
-  height: 80px;
-}
-
-.col-1 {
- width: 20px;
- border-top: 2px dashed #d3d3d3;
-}
-
-.col-2 {
-  width: 300px;
-  border: 1px solid #d3d3d3;
-}
-
-.col-3 {
-  width: 20px;
-  border: 1px solid #d3d3d3;
 }
